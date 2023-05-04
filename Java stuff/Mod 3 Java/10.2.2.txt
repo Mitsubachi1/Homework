@@ -1,0 +1,20 @@
+public class Bug
+{
+   private String climbed = "";
+
+
+   /* Your code goes here */
+   // Provide the getPosition and up methods
+   private int position;
+   public void up(){
+      position = position + 10;
+      if((position) >= 100){
+         position = 0;
+         }
+
+      }
+      
+   public int getPosition(){
+      return position;
+      }
+}

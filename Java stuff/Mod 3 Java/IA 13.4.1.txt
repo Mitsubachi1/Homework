@@ -1,0 +1,36 @@
+// Implement your CreditcardAccount class in this file
+public class CreditcardAccount extends BankAccount{
+   private int limit;
+   
+   public boolean debit(int amount){
+        if (balance + amount > limit) {
+            return false;
+        }
+        else{
+        balance -= amount;
+        return true;
+        }
+      }
+   public int getLimit(){
+      return limit;
+      }   
+   public void setLimit(int creditLimit){
+      limit = creditLimit;
+      }
+   public void applyInterest(){
+      double interest = interestRate * balance;
+      if (balance < 0 ){
+         balance += interest;
+         }
+      }
+   public String accountInfo(){
+      String info =  "Type of Account : Creditcard\n" +
+                     "Account ID      : " + accountID + "\n" +
+                     "Current Balance : $" + String.format("%.2f", -((double)balance/100)) + "\n" + 
+                     "Interest rate   : " + String.format("%.2f%%",interestRate*100) + "\n" +
+                     "Credit Limit    : $" + String.format("%.2f",(double)limit/100) + "\n";
+      return info;
+      
+      }
+   
+   }

@@ -1,0 +1,11 @@
+public static void removeShort(LinkedList<String> words)
+{
+   Iterator<String> iter = words.iterator();
+
+   while (iter.hasNext()) {
+       String word = iter.next();
+       if (word.length() < 4) {
+           iter.remove();
+       }
+   }
+}

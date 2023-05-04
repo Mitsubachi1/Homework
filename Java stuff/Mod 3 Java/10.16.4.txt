@@ -1,0 +1,84 @@
+/**
+   This class models a ball that bounces off walls.
+*/
+public class Ball
+{
+   // Instance variables
+
+   private int x; 
+   private int y; 
+   private int xDir; 
+   private int yDir; 
+   private int rightWall; 
+   private int topWall; 
+ 
+   /**
+      Constructs a ball at (0, 0) traveling northeast.
+      @param rightWall the position of the wall to the right
+      @param topWall the position of the wall at the top
+   */
+   public Ball(int rightWall, int topWall)   
+   {
+      /* Your code goes here */
+      x = 0;
+      y = 0;
+      xDir = 1; 
+      yDir = 1; 
+      this.rightWall = rightWall;
+      this.topWall = topWall;
+   }
+ 
+   /**
+      Moves the ball.
+   */
+   public void move()
+   {
+      x += xDir;
+      if (x >= rightWall) {
+         x = rightWall; 
+         xDir = -1; 
+      }
+      if (x < 0) {
+         x = 0; 
+         xDir = 1; 
+      }
+
+      y += yDir;
+      if (y >= topWall) {
+         y = topWall; 
+         yDir = -1; 
+      }
+      if (y == 0) {
+         y = 0;
+         yDir = 1;
+      }
+   }
+ 
+   /**
+      Turns the ball direction 90 degrees clockwise.
+   */
+   private void turn()
+   {
+      int temp = xDir;
+      xDir = yDir;
+      yDir = -temp;
+   }
+ 
+   /**
+      Gets the current x-position.
+      @return the x-position
+   */
+   public int getX()
+   {
+      return x;
+   }
+ 
+   /**
+      Gets the current y-position.
+      @return the y-position
+   */
+   public int getY()
+   {
+      return y;
+   }
+}

@@ -1,0 +1,34 @@
+/**
+   A simulated lock with digit buttons.
+*/
+public class Lock
+{
+   private String combination = "0042"; 
+   private String input = "";
+ 
+   /**
+      Simulates a digit button push.
+      @param button a digit 0 ... 9
+   */
+   public void push(int button)
+   {
+     String in = Integer.toString(button);
+     input += in; 
+   }
+   
+   /**
+      Simulates a push of the open button.
+      @return true if the lock opened
+   */
+   public boolean open()
+   {
+     if (input.equals(combination)){
+        input = "";
+        return true;
+    }
+      else{
+        input = "";
+        return false;
+    }
+   }
+}

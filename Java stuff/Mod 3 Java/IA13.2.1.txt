@@ -1,0 +1,37 @@
+// Implement your SavingsAccount class in this file
+public class SavingsAccount extends BankAccount{
+   public SavingsAccount(){super();}
+   
+    public boolean debit(int amount) {
+        if (amount < 0 || amount > balance) {
+            return false;
+        }
+        balance -= amount;
+        return true;
+    }
+    public void applyInterest() {
+        double interest = balance * interestRate;
+        if (balance > 0) {
+            balance += interest;
+        }
+    }
+    public String accountInfo() {
+       
+        return String.format("Type of Account : Savings\nAccount ID      : %s\nCurrent Balance : $%.2f\nInterest rate   : %.2f%%", accountID, (double) balance / 100, interestRate*100);
+    }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   }

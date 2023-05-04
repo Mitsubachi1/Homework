@@ -1,0 +1,20 @@
+import java.util.Stack;
+public class Stacks
+{
+   /**
+      Returns the largest number from the stack.
+      The stack has the same contents after the call.
+   */
+   public static Integer getLargest(Stack<Integer> s)
+   {
+
+      int largest = 0;
+      for(int num : s){
+         if (num > largest){
+            largest = num;
+            }
+         }
+   return largest;
+
+   }
+}

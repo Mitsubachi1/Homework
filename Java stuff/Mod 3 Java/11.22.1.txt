@@ -1,0 +1,33 @@
+public class Measurables
+{
+   /**
+      Swaps the values with the smallest and largest measure.
+      @param objects an array of objects of a class that implements the
+      Measurable interface.
+   */
+   public static void swapMinAndMax(Measurable[] objects)
+   {
+
+    if (objects == null || objects.length < 2) {
+        return;
+    }
+    
+    int minIndex = 0;
+    int maxIndex = 0;
+    for (int i = 1; i < objects.length; i++) {
+        if (objects[i].getMeasure() < objects[minIndex].getMeasure()) {
+            minIndex = i;
+        }
+        if (objects[i].getMeasure() > objects[maxIndex].getMeasure()) {
+            maxIndex = i;
+        }
+    }
+    
+    if (minIndex != maxIndex) {
+        Measurable temp = objects[minIndex];
+        objects[minIndex] = objects[maxIndex];
+        objects[maxIndex] = temp;
+    }
+
+   }
+}

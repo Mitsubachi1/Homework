@@ -1,0 +1,12 @@
+public class ForgetfulCritter extends Critter {
+   
+   public ForgetfulCritter() {
+      super();
+   }
+   
+   public void addHistory(String s) {
+      super.addHistory("?");
+   }
+   
+}
+

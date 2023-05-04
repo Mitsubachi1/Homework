@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class Utils
+{
+   public static <E extends Measurable> E min(ArrayList<E> objects)
+   {
+      E smallest = objects.get(0);
+      for (int i = 1; i < objects.size(); i++)
+      {
+         E obj = objects.get(i);
+         if (obj.getMeasure() < smallest.getMeasure())
+         {
+            smallest = obj;
+         }
+      }
+      return smallest;
+   }
+}

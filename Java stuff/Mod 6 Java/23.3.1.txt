@@ -1,0 +1,14 @@
+public class Roots
+{
+   public static Pair<Double, Double> roots(double x)
+   {
+
+      if (x >= 0) {
+         double root = Math.sqrt(x);
+         return new Pair<Double, Double>(root, -root);
+      } else {
+         return null;
+      }
+
+   }
+}

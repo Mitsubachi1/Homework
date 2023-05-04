@@ -1,0 +1,20 @@
+public class TreeMaker
+{
+   /**
+    * Create the Tree shown above.
+    */
+   public static Tree makeTree()
+   {
+      Tree t1 = new Tree("A");
+      Tree subleft = new Tree("B");
+      Tree center = new Tree("C");
+      Tree subright = new Tree("D");
+      Tree downlow = new Tree("E");
+      t1.addSubtree(subleft);
+      t1.addSubtree(center);
+      t1.addSubtree(subright);
+      center.addSubtree(downlow);
+      return t1 ;
+
+   }
+}

@@ -1,0 +1,26 @@
+/**
+   A quarter with a state theme.
+*/
+public class StateQuarter extends Coin
+{
+   private String state;
+   
+   /**
+      Constructs a state quarter.
+      @param aState the state name
+   */
+   public StateQuarter(String aState) 
+   {
+      super(0.25, "Quarter");
+      state = aState;
+   }
+   
+   /**
+      Gets the description of this object.
+      @return a description of this coin
+   */
+   public String toString()
+   {
+      return super.toString() + "[state=" + state + "]";
+   }
+}

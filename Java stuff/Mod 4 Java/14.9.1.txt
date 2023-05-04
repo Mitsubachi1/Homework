@@ -1,0 +1,18 @@
+import java.util.Queue;
+public class Queues
+{
+   /**
+      Returns the largest number from the queue.
+      The queue has the same contents after the call.
+   */
+   public static Integer getLargest(Queue<Integer> q)
+   {
+      int largest = 0;
+      for(int num : q){
+         if (num > largest){
+            largest = num;
+            }
+         }
+   return largest;
+   }
+}

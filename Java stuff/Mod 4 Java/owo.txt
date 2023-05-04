@@ -1,0 +1,18 @@
+// Make sure that the iterator is positioned at the beginning of the list
+Iterator iter = list.iterator();
+
+// Iterate over the list up to the specified index
+for (int i = 0; i < index; i++) {
+    if (!iter.hasNext()) {
+        // If the iterator doesn't have a next element, the index is out of bounds
+        throw new NoSuchElementException();
+    }
+    iter.next();
+}
+
+// At this point, the iterator should be pointing at the element at the specified index
+if (!iter.hasNext()) {
+    // If the iterator doesn't have a next element, the index is out of bounds
+    throw new NoSuchElementException();
+}
+return iter.next();

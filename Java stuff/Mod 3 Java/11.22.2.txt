@@ -1,0 +1,13 @@
+public class Segment implements Measurable {
+    private double start;
+    private double end;
+
+    public Segment(double start, double end) {
+        this.start = start;
+        this.end = end;
+    }
+
+    public double getMeasure() {
+        return Math.abs(end - start);
+    }
+}

@@ -1,0 +1,22 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class Lists
+{
+   public static void printSkipper(LinkedList<String> words)
+   {
+      Iterator<String> iter = words.iterator();
+         String letter = "";
+         String ch;
+      while(iter.hasNext()){
+         ch = iter.next();
+         letter += ch + " ";
+         if(iter.hasNext()){
+            iter.next();
+         }
+         
+         }
+      System.out.print(letter);
+      System.out.println();
+   }
+}

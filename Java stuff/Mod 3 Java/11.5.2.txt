@@ -1,0 +1,21 @@
+/**
+   A nervous critter moves back and forth between positions 0 and 1.
+*/
+public class NervousCritter extends Critter {
+    
+    private int position;
+    
+    public NervousCritter() {
+        position = 0;
+    }
+    
+    public void act() {
+        if (position == 0) {
+            move(1);
+            position = 1;
+        } else {
+            move(-1);
+            position = 0;
+        }
+    }
+}

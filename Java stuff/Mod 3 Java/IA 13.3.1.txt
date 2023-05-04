@@ -1,0 +1,36 @@
+public class CheckingAccount extends BankAccount{
+   private int overdraftFee = 0;
+   public boolean debit(int amount) {
+      
+        balance -= amount;
+        if(balance < 0){
+           balance -= overdraftFee;
+           }
+        return true;
+    }
+    
+    public void setFee(int fee) {
+        overdraftFee = fee;
+        
+    }
+    
+    public int getFee() {
+        return overdraftFee;
+    }
+    
+    public void applyInterest() {
+        double interest = balance * interestRate;
+        if (balance > 0) {
+            balance += interest;
+        }
+    }
+    public String accountInfo() {
+        String info ="Type of Account : Checking\n" +
+                     "Account ID      : " + accountID + "\n" +
+                     "Current Balance : $" + String.format("%.2f", (double) balance/100) + "\n" +
+                     "Interest rate   : " + String.format("%.2f", interestRate * 100 ) + "%\n" +
+                     "Overdraft Fee   : $" + String.format("%.2f", (double)overdraftFee/100);
+         return info;
+    }
+   
+   }

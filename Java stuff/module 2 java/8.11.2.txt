@@ -1,0 +1,19 @@
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
+public class LineWriter
+{
+   public static void writeAll(String[] lines, String filename) throws FileNotFoundException
+   {
+     try(PrintWriter out = new PrintWriter(filename)){
+      for (String line : lines)
+      {
+        out.println(line.toUpperCase());
+      }
+      out.close();
+      }
+      catch(FileNotFoundException ex){
+         throw new FileNotFoundException("");
+         }
+   }
+}

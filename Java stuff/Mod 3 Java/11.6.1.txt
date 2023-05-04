@@ -1,0 +1,8 @@
+public class FastCritter extends Critter {
+   public FastCritter() {
+      super();
+   }
+   public void move(int steps) {
+      super.move(steps * 2);
+   }
+}
